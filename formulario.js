@@ -22,10 +22,8 @@ formulario.onsubmit = function(e) {
   if (edad < 18 || edad > 120) {
     e.classList.add("error")
   }
-
-if (nombre.length > 0 
-  && (edad > 18 
-    && edad < 120) ) {
+//LA EDAD SE PUESE FORMUKAR EN UNA SOLA LINEA DE CODIGO SIN HACERLO CONFUSO
+if (nombre.length > 0 && (edad > 18 && edad < 120) ) {
   agregarInvitado(nombre, edad, nacionalidad)
   }
 }
@@ -55,7 +53,8 @@ function agregarInvitado(nombre, edad, nacionalidad) {
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+//NO RECUERDO NINGUN ADDED
+elementoLista.classList.add("elemento-lista")
 lista.appendChild(elementoLista)
 
 var spanNombre = document.createElement("span")
